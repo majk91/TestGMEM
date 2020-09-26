@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GenesisTestApp</string>
+    <string name="title">The necessary repository is always at hand</string>
+    <string name="tab_text_1">Search Result</string>
+    <string name="tab_text_2">Favorites</string>
+    <string name="hello">Hello</string>
+</resources>
