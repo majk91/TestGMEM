@@ -1,6 +1,8 @@
 package tk.yumini.genesistestapp_.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,12 +25,9 @@ import tk.yumini.genesistestapp_.model.room.FavRepo;
 public class FavRepoAdapter extends RecyclerView.Adapter<FavRepoAdapter.FavRepoHolder> {
 
     private List<FavRepo> list =  new ArrayList<>();
-    //private LayoutInflater mInflater;
     private Context mContext;
-    public FavRepoAdapter(Context context/*, List<FavRepo> favRepos*/) {
+    public FavRepoAdapter(Context context) {
         mContext = context;
-        //list = favRepos;
-        //mInflater = LayoutInflater.from(context);
     }
 
     public void setList(List<FavRepo> newlist ){
@@ -68,6 +67,13 @@ public class FavRepoAdapter extends RecyclerView.Adapter<FavRepoAdapter.FavRepoH
                 public void onClick(View view) {
                     Toast.makeText(mContext,"click on item: ",Toast.LENGTH_LONG).show();
                     mAboutDataListener.onDataReceived(favRepo);
+                }
+            });
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(favRepo.getHtml_url())));
                 }
             });
         }

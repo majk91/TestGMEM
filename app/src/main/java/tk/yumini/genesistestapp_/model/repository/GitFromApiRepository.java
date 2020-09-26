@@ -102,7 +102,6 @@ public class GitFromApiRepository {
 
 
 
-
     public void startRequest(){
         Observable<GitResponseModel> one = NetworkService.getservice().getGitRepo(mString, page, 15)
                 .subscribeOn(Schedulers.io())

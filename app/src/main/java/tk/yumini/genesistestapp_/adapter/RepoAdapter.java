@@ -25,12 +25,9 @@ import tk.yumini.genesistestapp_.view.MainActivity;
 public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.FavRepoHolder> {
 
     private List<GitRepoModel> list =  new ArrayList<>();
-    //private LayoutInflater mInflater;
     private Context mContext;
-    public RepoAdapter(Context context/*, List<FavRepo> favRepos*/) {
+    public RepoAdapter(Context context) {
         mContext = context;
-        //list = favRepos;
-        //mInflater = LayoutInflater.from(context);
     }
 
     public void setList(List<GitRepoModel> newlist ){

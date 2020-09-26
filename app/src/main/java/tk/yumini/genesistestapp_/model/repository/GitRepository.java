@@ -44,25 +44,6 @@ public class GitRepository {
         return allFavRepo;
     }
 
-    public void getById(Long id){
-        /*favRepoDao.getById(1L)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new DisposableSingleObserver<FavRepo>() {
-                    @Override
-                    public void onSuccess(FavRepo employee) {
-                        // ...
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        // ...
-                    }
-                });
-                */
-
-    }
-
     private  static class InsertNoteAsyncTask extends AsyncTask<FavRepo, Void, Void> {
 
         private FavRepoDao favRepoDao;
